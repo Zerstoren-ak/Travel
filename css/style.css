@@ -1,0 +1,1012 @@
+/*CSS reset/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Common*/
+button:active {
+    outline: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --pt-60: 60px;
+    --pb-70: 70px;
+    --letter-extra: 4px;
+    --ph-w: 690px;
+}
+
+:root.day {
+    --font-color: #000000;
+    --bg-color: #ffffff;
+    --alt-font-color: #ffffff;
+    --about-text-p: #5b5b5c;
+    --shadow: #dedede;
+}
+
+:root.night {
+    --font-color: #ffffff;
+    --bg-color: #333333;
+    --alt-font-color: #000000;
+    --about-text-p: #979798;
+    --shadow: #555758;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+a,
+span,
+input {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*header*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 40px 0;
+}
+
+.navbar {
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar>* + * {
+    margin-left: 80px;
+}
+
+.navbar button {
+    display: inline-flex;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    letter-spacing: inherit;
+    color: var(--alt-font-color);
+    cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+    transition: text-shadow .3s ease;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+/** Main heading **/
+
+.hero {
+    padding-top: 470px;
+    padding-bottom: 400px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+        url("../img/header-background.jpg") no-repeat center / cover;
+    color: #ffffff;
+}
+
+.hero>.container{
+    position: relative;
+}
+
+.title {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: var(--letter-extra);
+}
+
+.main-btn {
+    padding: 15px 80px;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #ffffff;
+
+    transition: all .2s ease;
+}
+
+.main-btn:hover {
+
+    text-shadow: 5px 5px 5px #ffffff;
+    box-shadow: inset 0 0 10px #ffffff;
+}
+
+/* Sidebar */
+
+.navbar.navbar-social{
+    position: absolute;
+    transform: rotate(90deg) translate(-65%, 0%);
+    transform-origin: 0 100%;
+    left: calc(100% + 10px);
+    top: 50%;
+}
+
+/* About with photo, dark btn*/
+
+.about{
+    padding: var(--pt-60) 0;
+}
+
+.about>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-title {
+    margin-bottom: 20px;
+    color: #c4c4c4;
+    font-size: 22px;
+}
+
+.section-slogan {
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.about-section {
+    width: 69%;
+}
+
+.about .about-text div {
+    width: 82%;
+}
+
+.about-text div>p {
+    font-size: 22px;
+    color: var(--about-text-p);
+    margin-bottom: 50px;
+}
+
+.main-btn.dark {
+    border-color: var(--font-color);
+    color: var(--font-color);
+}
+
+.main-btn.dark:hover {
+    text-shadow: 5px 5px 5px var(--font-color);
+    box-shadow: inset 0 0 5px var(--font-color);
+}
+
+.about-image{
+    box-shadow: 30px 30px 50px 3px var(--shadow);
+    position: relative;
+}
+
+.about-image::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-50deg, rgba(0,0,0,.45), transparent);
+}
+
+.about-image>img{
+    display: block;
+    width: var(--ph-w);
+}
+
+/* Photo gallery by photographers */
+
+.gallery {
+    padding: var(--pb-70) 0;
+    text-align: center;
+}
+
+.gallery-title {
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: var(--letter-extra);
+    text-transform: uppercase;
+}
+
+.gallery-slogan {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--about-text-p);
+    margin-bottom: 80px;
+    width: 57%;
+}
+
+.people-gallery {
+    display: flex !important;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.people-gallery>img {
+    margin: 20px;
+    object-fit: cover;
+    height: 450px;
+}
+
+.img-sm {
+    width: calc(20% - 40px);
+}
+
+.img-md{
+    width: calc(30% - 40px);
+}
+
+.img-md-extra {
+    width: calc(40% - 40px);
+}
+
+.img-lg{
+    width: calc(50% - 40px);
+}
+
+/* Slider */
+
+.slider {
+    padding-bottom: 70px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider .slick-prev {
+    right: calc(50% + 85px);
+}
+
+.slider .slick-next {
+    left: calc(50% + 85px);
+}
+
+/* Next photo gallery*/
+
+.company-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-gallery>div {
+    text-align: left;
+    width: 790px;
+}
+
+.company-gallery>div>img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 60px;
+}
+
+.photo-caption {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+
+.photo-caption + p {
+    font-size: 20px;
+    width: 95%;
+    color: var(--about-text-p);
+    line-height: 40px;
+    letter-spacing: var(--letter-extra);
+    margin-bottom:  70px;
+}
+
+.main-btn.dark.view {
+    text-transform: uppercase;
+    padding: 15px 60px;
+}
+
+/** Next tour **/
+
+.tour {
+    padding-top: var(--pb-70);
+}
+
+.tour>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tour-image {
+    box-shadow: 40px 0 50px -5px var(--shadow);
+}
+
+.tour-image>img {
+    display: block;
+    width: var(--ph-w);
+}
+
+.tour-section {
+    width: 69%;
+}
+
+.tour .about-text {
+    width: 48%;
+}
+
+.tour .about-text div {
+    padding-right: 15px;
+}
+
+/*Book form*/
+
+.booking {
+    background-color: #f4f4f4;
+}
+
+.booking>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 140px 0;
+}
+
+.booking-info {
+    margin-left: 50px;
+}
+
+.section-slogan.booking-title {
+    margin-bottom: 15px;
+    letter-spacing: var(--letter-extra);
+    color: #000000;
+}
+
+.booking-slogan {
+    font-size: 18px;
+    color: #5b5b5c;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    width: 57%;
+}
+
+.form input {
+    font-family: inherit;
+    font-size: 22px;
+    letter-spacing: var(--letter-extra);
+    background-color: #f4f4f4;
+    width: 31%;
+    height: 75px;
+    padding: 0 25px;
+    border: 2px solid #7a7a7a;
+
+    transition: border .3s ease;
+
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+.form input:focus::placeholder {
+    color: transparent;
+}
+
+.form input:valid:required {
+    border: 2px solid #00ed00;
+}
+
+.form input:focus:invalid:required {
+    border: 2px solid #ff0000;
+}
+
+.form button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    font: inherit;
+    font-size: 22px;
+    width: 26%;
+    background-color: #3a4047;
+    border: 2px solid  #7a7a7a;
+    color: #ffffff;
+    letter-spacing: var(--letter-extra);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form button::before {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    height: 2%;
+    width: 0;
+    background-color: #fff;
+    transition: .4s;
+}
+
+.form button:hover::before {
+    width: 43%;
+}
+
+.form button:active {
+    border-width: 1px;
+    box-shadow:
+            inset 3px 3px 0 #f4f4f4,
+            inset -3px -3px 0 #f4f4f4;
+}
+
+/*footer*/
+
+.footer {
+    padding: var(--pb-70) 0;
+}
+
+.footer>.container {
+    text-align: center;
+}
+
+.footer p {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 12px;
+}
+
+.footer .navbar {
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 45px;
+}
+
+.footer .navbar a:hover {
+    text-shadow: 0 0 5px var(--font-color);
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero {
+        padding: 300px 0;
+    }
+
+    .navbar.navbar-social {
+        left: 99%;
+        transform: rotate(90deg) translate(-60%, 0%);
+    }
+
+    :root {
+        --ph-w: 450px;
+        --letter-extra: 2px;
+    }
+
+    .section-slogan {
+        width: 100%;
+    }
+
+    .about .about-text div {
+        width: 100%;
+    }
+
+    .about-image {
+        margin-left: 20px;
+    }
+
+    .gallery {
+        padding-bottom: 0;
+    }
+
+    .people-gallery>img {
+        height: 300px;
+    }
+
+    .gallery-slogan {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .company-gallery>div {
+        width: 49%;
+    }
+
+    .tour .about-text {
+        width: 100%;
+    }
+    .tour .about-text div {
+        padding: 0;
+    }
+    .tour-image {
+        margin-right: 40px;
+    }
+
+    .form input,
+    .form button {
+        height: 60px;
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .company-gallery>div>img,
+    .photo-caption,
+    .photo-caption + p {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero {
+        padding: 280px 0;
+    }
+
+    .title {
+        font-size: 80px;
+    }
+
+    .navbar.navbar-social {
+        left: 50%;
+        top: -90%;
+        transform: translate(-50%, 0);
+    }
+
+    .about .section-slogan,
+    .about .about-text div>p {
+        margin-bottom: 30px;
+    }
+
+    .people-gallery {
+        margin: 0 -10px;
+    }
+
+    .people-gallery>img {
+        margin: 10px;
+        height: 260px;
+    }
+
+    .img-sm {
+        width: calc(20% - 20px);
+    }
+
+    .img-md{
+        width: calc(30% - 20px);
+    }
+
+    .img-md-extra {
+        width: calc(40% - 20px);
+    }
+
+    .img-lg{
+        width: calc(50% - 20px);
+    }
+
+    .photo-caption {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .company-gallery>div>p {
+        font-size: 18px;
+        width: 100%;
+        line-height: normal;
+    }
+
+    .tour .section-slogan,
+    .tour .about-text div>p {
+        margin-bottom: 30px;
+    }
+
+    .booking>.container {
+        padding: 50px 15px;
+    }
+
+    .booking-info {
+        margin: 0 20px 0 0;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 740px;
+    }
+
+    .navbar.navbar-social {
+        left: 50%;
+        top: -110%;
+        transform: translate(-50%, 0);
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    :root {
+        --ph-w: 300px;
+    }
+
+    .section-slogan {
+        font-size: 20px;
+    }
+
+    .about-text div>p {
+        font-size: 16px;
+    }
+
+    .company-gallery div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-btn.dark.view {
+        justify-content: center;
+    }
+
+    .gallery-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .gallery-slogan {
+        font-size: 18px;
+    }
+
+    .people-gallery>img {
+        height: 200px;
+    }
+
+    .booking-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .booking>.container {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 98%;
+    }
+
+    .form input,
+    .form button {
+        height: 50px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%
+    }
+
+    .navbar.navbar-social {
+        left: 50%;
+        top: -65%;
+        transform: translate(-50%, 0);
+    }
+
+    .hero {
+        padding: 200px 0;
+    }
+
+    .main-btn {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    :root {
+        --ph-w: 300px;
+        --pt-60: 30px;
+        --pb-70: 30px;
+    }
+
+    .tour>.container {
+        flex-direction: column;
+    }
+
+    .about>.container {
+        flex-direction: column-reverse;
+    }
+
+    .company-gallery {
+        flex-direction: column;
+    }
+    .company-gallery>div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form input,
+    .form button{
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .footer .navbar {
+        flex-direction: column;
+    }
+
+    .footer .navbar>* {
+        margin: 20px 0;
+    }
+
+    .about-image,
+    .tour-image {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%
+    }
+
+    .navbar,
+    .footer .navbar {
+        flex-direction: column;
+        font-size: 17px;
+    }
+
+    .footer .navbar {
+        align-items: center;
+    }
+
+    .navbar>* {
+        margin: 0 0 15px 40px;
+    }
+
+    .navbar.navbar-social {
+        left: 70%;
+        top: 120%;
+        transform: translate(-50%, 0);
+    }
+
+    .hero {
+        padding: 200px 0;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .people-gallery>img {
+        height: 100px;
+    }
+
+    .about-text div>p,
+    .company-gallery>p,
+    .gallery-slogan {
+        font-size: 15px;
+    }
+
+    .about-text a {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .section-slogan,
+    .gallery-title,
+    .photo-caption {
+        font-size: 16px;
+    }
+
+    .form input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 100%
+    }
+}
+
+
+
+
+
+
+
+
