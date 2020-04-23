@@ -214,7 +214,7 @@ input {
     justify-content: center;
 }
 
-.navbar>* + * {
+.navbar > * + * {
     margin-left: 80px;
 }
 
@@ -242,11 +242,11 @@ input {
     padding-bottom: 400px;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
-        url("../img/header-background.jpg") no-repeat center / cover;
+    url("../img/header-background.jpg") no-repeat center / cover;
     color: #ffffff;
 }
 
-.hero>.container{
+.hero > .container {
     position: relative;
 }
 
@@ -281,7 +281,7 @@ input {
 
 /* Sidebar */
 
-.navbar.navbar-social{
+.navbar.navbar-social {
     position: absolute;
     transform: rotate(90deg) translate(-65%, 0%);
     transform-origin: 0 100%;
@@ -291,15 +291,16 @@ input {
 
 /* About with photo, dark btn*/
 
-.about{
+.about {
     padding: var(--pt-60) 0;
 }
 
-.about>.container{
+.about > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .section-title {
     margin-bottom: 20px;
     color: #c4c4c4;
@@ -321,7 +322,7 @@ input {
     width: 82%;
 }
 
-.about-text div>p {
+.about-text div > p {
     font-size: 22px;
     color: var(--about-text-p);
     margin-bottom: 50px;
@@ -337,22 +338,22 @@ input {
     box-shadow: inset 0 0 5px var(--font-color);
 }
 
-.about-image{
+.about-image {
     box-shadow: 30px 30px 50px 3px var(--shadow);
     position: relative;
 }
 
-.about-image::before{
+.about-image::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-50deg, rgba(0,0,0,.45), transparent);
+    background: linear-gradient(-50deg, rgba(0, 0, 0, .45), transparent);
 }
 
-.about-image>img{
+.about-image > img {
     display: block;
     width: var(--ph-w);
 }
@@ -387,7 +388,7 @@ input {
     margin: 0 -20px;
 }
 
-.people-gallery>img {
+.people-gallery > img {
     margin: 20px;
     object-fit: cover;
     height: 450px;
@@ -397,7 +398,7 @@ input {
     width: calc(20% - 40px);
 }
 
-.img-md{
+.img-md {
     width: calc(30% - 40px);
 }
 
@@ -405,7 +406,7 @@ input {
     width: calc(40% - 40px);
 }
 
-.img-lg{
+.img-lg {
     width: calc(50% - 40px);
 }
 
@@ -445,12 +446,12 @@ input {
     justify-content: space-between;
 }
 
-.company-gallery>div {
+.company-gallery > div {
     text-align: left;
     width: 790px;
 }
 
-.company-gallery>div>img {
+.company-gallery > div > img {
     width: 100%;
     object-fit: cover;
     margin-bottom: 60px;
@@ -469,7 +470,7 @@ input {
     color: var(--about-text-p);
     line-height: 40px;
     letter-spacing: var(--letter-extra);
-    margin-bottom:  70px;
+    margin-bottom: 70px;
 }
 
 .main-btn.dark.view {
@@ -483,7 +484,7 @@ input {
     padding-top: var(--pb-70);
 }
 
-.tour>.container {
+.tour > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -493,7 +494,7 @@ input {
     box-shadow: 40px 0 50px -5px var(--shadow);
 }
 
-.tour-image>img {
+.tour-image > img {
     display: block;
     width: var(--ph-w);
 }
@@ -516,7 +517,7 @@ input {
     background-color: #f4f4f4;
 }
 
-.booking>.container {
+.booking > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -581,7 +582,7 @@ input {
     font-size: 22px;
     width: 26%;
     background-color: #3a4047;
-    border: 2px solid  #7a7a7a;
+    border: 2px solid #7a7a7a;
     color: #ffffff;
     letter-spacing: var(--letter-extra);
     text-transform: uppercase;
@@ -604,9 +605,8 @@ input {
 
 .form button:active {
     border-width: 1px;
-    box-shadow:
-            inset 3px 3px 0 #f4f4f4,
-            inset -3px -3px 0 #f4f4f4;
+    box-shadow: inset 3px 3px 0 #f4f4f4,
+    inset -3px -3px 0 #f4f4f4;
 }
 
 /*footer*/
@@ -615,7 +615,7 @@ input {
     padding: var(--pb-70) 0;
 }
 
-.footer>.container {
+.footer > .container {
     text-align: center;
 }
 
@@ -673,7 +673,7 @@ input {
         padding-bottom: 0;
     }
 
-    .people-gallery>img {
+    .people-gallery > img {
         height: 300px;
     }
 
@@ -682,16 +682,18 @@ input {
         margin-bottom: 35px;
     }
 
-    .company-gallery>div {
+    .company-gallery > div {
         width: 49%;
     }
 
     .tour .about-text {
         width: 100%;
     }
+
     .tour .about-text div {
         padding: 0;
     }
+
     .tour-image {
         margin-right: 40px;
     }
@@ -703,7 +705,7 @@ input {
         padding: 0 15px;
     }
 
-    .company-gallery>div>img,
+    .company-gallery > div > img,
     .photo-caption,
     .photo-caption + p {
         margin-bottom: 30px;
@@ -730,7 +732,7 @@ input {
     }
 
     .about .section-slogan,
-    .about .about-text div>p {
+    .about .about-text div > p {
         margin-bottom: 30px;
     }
 
@@ -738,7 +740,7 @@ input {
         margin: 0 -10px;
     }
 
-    .people-gallery>img {
+    .people-gallery > img {
         margin: 10px;
         height: 260px;
     }
@@ -747,7 +749,7 @@ input {
         width: calc(20% - 20px);
     }
 
-    .img-md{
+    .img-md {
         width: calc(30% - 20px);
     }
 
@@ -755,7 +757,7 @@ input {
         width: calc(40% - 20px);
     }
 
-    .img-lg{
+    .img-lg {
         width: calc(50% - 20px);
     }
 
@@ -765,18 +767,18 @@ input {
         font-weight: 600;
     }
 
-    .company-gallery>div>p {
+    .company-gallery > div > p {
         font-size: 18px;
         width: 100%;
         line-height: normal;
     }
 
     .tour .section-slogan,
-    .tour .about-text div>p {
+    .tour .about-text div > p {
         margin-bottom: 30px;
     }
 
-    .booking>.container {
+    .booking > .container {
         padding: 50px 15px;
     }
 
@@ -817,7 +819,7 @@ input {
         font-size: 20px;
     }
 
-    .about-text div>p {
+    .about-text div > p {
         font-size: 16px;
     }
 
@@ -841,7 +843,7 @@ input {
         font-size: 18px;
     }
 
-    .people-gallery>img {
+    .people-gallery > img {
         height: 200px;
     }
 
@@ -850,7 +852,7 @@ input {
         margin-bottom: 20px;
     }
 
-    .booking>.container {
+    .booking > .container {
         flex-direction: column;
     }
 
@@ -891,18 +893,19 @@ input {
         --pb-70: 30px;
     }
 
-    .tour>.container {
+    .tour > .container {
         flex-direction: column;
     }
 
-    .about>.container {
+    .about > .container {
         flex-direction: column-reverse;
     }
 
     .company-gallery {
         flex-direction: column;
     }
-    .company-gallery>div {
+
+    .company-gallery > div {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -913,7 +916,7 @@ input {
     }
 
     .form input,
-    .form button{
+    .form button {
         width: 60%;
         margin-bottom: 20px;
     }
@@ -922,7 +925,7 @@ input {
         flex-direction: column;
     }
 
-    .footer .navbar>* {
+    .footer .navbar > * {
         margin: 20px 0;
     }
 
@@ -947,7 +950,7 @@ input {
         align-items: center;
     }
 
-    .navbar>* {
+    .navbar > * {
         margin: 0 0 15px 40px;
     }
 
@@ -969,12 +972,12 @@ input {
         font-size: 16px;
     }
 
-    .people-gallery>img {
+    .people-gallery > img {
         height: 100px;
     }
 
-    .about-text div>p,
-    .company-gallery>p,
+    .about-text div > p,
+    .company-gallery > p,
     .gallery-slogan {
         font-size: 15px;
     }
