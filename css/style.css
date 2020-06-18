@@ -578,6 +578,7 @@ input {
     position: relative;
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     font: inherit;
     font-size: 22px;
     width: 26%;
@@ -597,6 +598,7 @@ input {
     width: 0;
     background-color: #fff;
     transition: .4s;
+
 }
 
 .form button:hover::before {
